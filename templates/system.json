@@ -1,0 +1,21 @@
+{
+  "_id": "{{@ system @}}",
+  "oauth2": {
+    "access_token": "$SECRET(oauth_access_token)",
+    "client_id": "$SECRET(oauth_client_id)",
+    "client_secret": "$SECRET(oauth_client_secret)",
+    "refresh_token": "$SECRET(oauth_refresh_token)",
+    "token_url": "{{@ token_url @}}"
+  },
+  "operations": {
+    "list-companies": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "payload_property": "companies",
+      "url": "companies"
+    }
+  },
+  "type": "system:rest",
+  "url_pattern": "https://api.infusionsoft.com/crm/rest/v1/%s",
+  "verify_ssl": true
+}
