@@ -1,5 +1,3 @@
-# connector-rest-oauth2-template
+# Keap CRM Connector
 
-Simple to use template for a Sesam connector that uses a REST system with Oauth2.
-
-Remember to replace this README with the connector details when you use the template.
+Connector to the Keap CRM system. It uses standard REST API and OAuth2 authorization, see wiki for details.
