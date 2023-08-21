@@ -8,11 +8,25 @@
     "token_url": "{{@ token_url @}}"
   },
   "operations": {
+    "insert": {
+      "id_expression": "{{ id }}",
+      "method": "POST",
+      "url": "{{ properties.datatype }}"
+    },
     "list-companies": {
       "id_expression": "{{ id }}",
       "method": "GET",
       "payload_property": "companies",
-      "url": "companies"
+      "url": "{{ properties.datatype }}"
+    },
+    "lookup": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "url": "{{ properties.datatype }}/{{ entity.id }}"
+    },
+    "update": {
+      "method": "PATCH",
+      "url": "{{ properties.datatype }}/{{ entity.id }}"
     }
   },
   "type": "system:rest",
