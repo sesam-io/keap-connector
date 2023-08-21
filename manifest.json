@@ -7,6 +7,9 @@
     "company": {
       "label": "Company",
       "template": "templates/company.json"
+    },
+    "contact": {
+      "template": "templates/contact.json"
     }
   },
   "oauth2": {
