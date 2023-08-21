@@ -8,11 +8,35 @@
     "token_url": "{{@ token_url @}}"
   },
   "operations": {
+    "delete": {
+      "method": "DELETE",
+      "url": "{{ properties.datatype }}/{{ entity.id }}"
+    },
+    "insert": {
+      "id_expression": "{{ id }}",
+      "method": "POST",
+      "url": "{{ properties.datatype }}"
+    },
     "list-companies": {
       "id_expression": "{{ id }}",
       "method": "GET",
       "payload_property": "companies",
-      "url": "companies"
+      "url": "{{ properties.datatype }}"
+    },
+    "list-contacts": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "payload_property": "contacts",
+      "url": "{{ properties.datatype }}"
+    },
+    "lookup": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "url": "{{ properties.datatype }}/{{ entity.id }}"
+    },
+    "update": {
+      "method": "PATCH",
+      "url": "{{ properties.datatype }}/{{ entity.id }}"
     }
   },
   "type": "system:rest",
