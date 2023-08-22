@@ -1,0 +1,96 @@
+{
+  "$id": "/api/pipes/xxxxxx-product-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "product_desc": {
+      "type": "string"
+    },
+    "product_name": {
+      "type": "string"
+    },
+    "product_options": {
+      "items": {
+        "anyOf": []
+      },
+      "type": "array"
+    },
+    "product_price": {
+      "type": "integer"
+    },
+    "product_short_desc": {
+      "description": "",
+      "type": null
+    },
+    "sku": {
+      "description": "",
+      "type": null
+    },
+    "status": {
+      "type": "integer"
+    },
+    "subscription_only": {
+      "type": "boolean"
+    },
+    "subscription_plans": {
+      "items": {
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "cycle_type": {
+            "enum": [
+              "YEAR",
+              "MONTH",
+              "WEEK",
+              "DAY"
+            ],
+            "type": "string"
+          },
+          "frequency": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "id": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "number_of_cycles": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "plan_price": {
+            "format": "double",
+            "type": "number"
+          },
+          "subscription_plan_index": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "subscription_plan_name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "cycle_type",
+          "id",
+          "plan_price"
+        ],
+        "title": "ProductSubscription",
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-product-collect",
+  "type": "object"
+}
