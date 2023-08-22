@@ -13,10 +13,9 @@
       "method": "POST",
       "url": "{{ properties.datatype }}"
     },
-    "list-companies": {
+    "list": {
       "id_expression": "{{ id }}",
       "method": "GET",
-      "payload_property": "companies",
       "url": "{{ properties.datatype }}"
     },
     "lookup": {

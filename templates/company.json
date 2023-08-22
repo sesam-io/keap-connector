@@ -3,7 +3,8 @@
     "_id": "{{@ system @}}-{{@ datatype @}}-collect",
     "namespaced_identifiers": false,
     "source": {
-      "operation": "list-companies",
+      "operation": "list",
+      "payload_property": "companies",
       "properties": {
         "datatype": "companies"
       },
