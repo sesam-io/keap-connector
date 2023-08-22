@@ -1,0 +1,120 @@
+{
+  "$id": "/api/pipes/xxxxxx-company-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "address": {
+      "properties": {
+        "country_code": {
+          "type": "string"
+        },
+        "line1": {
+          "type": "string"
+        },
+        "line2": {
+          "type": "string"
+        },
+        "locality": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "zip_code": {
+          "type": "string"
+        },
+        "zip_four": {
+          "type": "string"
+        }
+      },
+      "title": "CompanyAddress",
+      "type": "object"
+    },
+    "company_name": {
+      "type": "string"
+    },
+    "custom_fields": {
+      "items": {
+        "properties": {
+          "content": {
+            "type": "object"
+          },
+          "id": {
+            "format": "int64",
+            "type": "integer"
+          }
+        },
+        "title": "CustomFieldValue",
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "email_address": {
+      "type": "string"
+    },
+    "email_opted_in": {
+      "type": "boolean"
+    },
+    "email_status": {
+      "enum": [
+        "UnengagedMarketable",
+        "SingleOptIn",
+        "DoubleOptin",
+        "Confirmed",
+        "UnengagedNonMarketable",
+        "NonMarketable",
+        "Lockdown",
+        "Bounce",
+        "HardBounce",
+        "Manual",
+        "Admin",
+        "System",
+        "ListUnsubscribe",
+        "Feedback",
+        "Spam",
+        "Invalid",
+        "Deactivated"
+      ],
+      "type": "string"
+    },
+    "fax_number": {
+      "properties": {
+        "number": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "title": "CompanyFaxNumber",
+      "type": "object"
+    },
+    "id": {
+      "format": "int64",
+      "type": "integer"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "phone_number": {
+      "properties": {
+        "extension": {
+          "type": "string"
+        },
+        "number": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "title": "CompanyPhoneNumber",
+      "type": "object"
+    },
+    "website": {
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-company-collect",
+  "type": "object"
+}
