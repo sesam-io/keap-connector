@@ -4,6 +4,7 @@
     "namespaced_identifiers": false,
     "source": {
       "operation": "list-{{@ datatype @}}s",
+      "payload_property": "{{@ datatype @}}s",
       "properties": {
         "datatype": "{{@ datatype @}}s"
       },

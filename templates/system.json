@@ -26,7 +26,6 @@
     "list-contacts": {
       "id_expression": "{{ id }}",
       "method": "GET",
-      "payload_property": "contacts",
       "url": "{{ properties.datatype }}"
     },
     "lookup": {
