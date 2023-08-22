@@ -4,9 +4,9 @@
     "namespaced_identifiers": false,
     "source": {
       "operation": "list",
-      "payload_property": "{{@ datatype @}}s",
+      "payload_property": "{{@ endpoint @}}",
       "properties": {
-        "datatype": "{{@ datatype @}}s"
+        "datatype": "{{@ endpoint @}}"
       },
       "system": "{{@ system @}}",
       "type": "rest"
@@ -77,16 +77,16 @@
       {
         "properties": {
           "operation_delete_properties": {
-            "datatype": "{{@ datatype @}}s"
+            "datatype": "{{@ endpoint @}}"
           },
           "operation_insert_properties": {
-            "datatype": "{{@ datatype @}}s"
+            "datatype": "{{@ endpoint @}}"
           },
           "operation_lookup_properties": {
-            "datatype": "{{@ datatype @}}s"
+            "datatype": "{{@ endpoint @}}"
           },
           "operation_update_properties": {
-            "datatype": "{{@ datatype @}}s"
+            "datatype": "{{@ endpoint @}}"
           },
           "primary_key": "id",
           "rest_system": "{{@ system @}}",
