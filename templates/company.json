@@ -4,9 +4,9 @@
     "namespaced_identifiers": false,
     "source": {
       "operation": "list",
-      "payload_property": "companies",
+      "payload_property": "{{@ endpoint @}}",
       "properties": {
-        "datatype": "companies"
+        "datatype": "{{@ endpoint @}}"
       },
       "system": "{{@ system @}}",
       "type": "rest"
@@ -71,13 +71,13 @@
       {
         "properties": {
           "operation_insert_properties": {
-            "datatype": "companies"
+            "datatype": "{{@ endpoint @}}"
           },
           "operation_lookup_properties": {
-            "datatype": "companies"
+            "datatype": "{{@ endpoint @}}"
           },
           "operation_update_properties": {
-            "datatype": "companies"
+            "datatype": "{{@ endpoint @}}"
           },
           "primary_key": "id",
           "rest_system": "{{@ system @}}",
