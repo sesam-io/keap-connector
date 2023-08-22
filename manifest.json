@@ -10,6 +10,13 @@
       "parameters": {
         "endpoint":"companies"
       }
+    },
+    "product": {
+      "label": "Product",
+      "template": "templates/product.json",
+      "parameters": {
+        "endpoint":"products"
+      }
     }
     
   },
