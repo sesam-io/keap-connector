@@ -3,7 +3,7 @@
     "_id": "{{@ system @}}-{{@ datatype @}}-collect",
     "namespaced_identifiers": false,
     "source": {
-      "operation": "list-{{@ datatype @}}s",
+      "operation": "list",
       "payload_property": "{{@ datatype @}}s",
       "properties": {
         "datatype": "{{@ datatype @}}s"
@@ -47,7 +47,13 @@
             ],
             [
               "remove",
-              "id"
+              [
+                "list",
+                "id",
+                "ScoreValue",
+                "last_updated_utc_millis",
+                "tag_ids"
+              ]
             ]
           ],
           "default": [

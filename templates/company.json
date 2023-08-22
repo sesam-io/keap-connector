@@ -47,7 +47,12 @@
             ],
             [
               "remove",
-              "id"
+              [
+                "list",
+                "id",
+                "email_opted_in",
+                "email_status"
+              ]
             ]
           ],
           "default": [
