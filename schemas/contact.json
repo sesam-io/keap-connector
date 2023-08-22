@@ -1,0 +1,117 @@
+{
+  "$id": "/api/pipes/xxxxxx-contact-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "ScoreValue": {
+      "description": "",
+      "type": "string"
+    },
+    "addresses": {
+      "items": {
+        "anyOf": []
+      },
+      "type": "array"
+    },
+    "company": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "properties": {
+            "company_name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "date_created": {
+      "type": "string"
+    },
+    "email_addresses": {
+      "items": {
+        "additionalProperties": true,
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "field": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "email_opted_in": {
+      "type": "boolean"
+    },
+    "email_status": {
+      "type": "string"
+    },
+    "family_name": {
+      "type": "string"
+    },
+    "given_name": {
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "last_updated": {
+      "type": "string"
+    },
+    "last_updated_utc_millis": {
+      "type": "integer"
+    },
+    "middle_name": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "owner_id": {
+      "type": "integer"
+    },
+    "phone_numbers": {
+      "items": {
+        "additionalProperties": true,
+        "properties": {
+          "extension": {
+            "type": "null"
+          },
+          "field": {
+            "type": "string"
+          },
+          "number": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "tag_ids": {
+      "items": {
+        "anyOf": []
+      },
+      "type": "array"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-contact-collect",
+  "type": "object"
+}

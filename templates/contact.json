@@ -4,9 +4,9 @@
     "namespaced_identifiers": false,
     "source": {
       "operation": "list",
-      "payload_property": "{{@ endpoint @}}",
+      "payload_property": "{{@ datatype @}}s",
       "properties": {
-        "datatype": "{{@ endpoint @}}"
+        "datatype": "{{@ datatype @}}s"
       },
       "system": "{{@ system @}}",
       "type": "rest"
@@ -50,8 +50,9 @@
               [
                 "list",
                 "id",
-                "email_opted_in",
-                "email_status"
+                "ScoreValue",
+                "last_updated_utc_millis",
+                "tag_ids"
               ]
             ]
           ],
@@ -75,14 +76,17 @@
       },
       {
         "properties": {
+          "operation_delete_properties": {
+            "datatype": "{{@ datatype @}}s"
+          },
           "operation_insert_properties": {
-            "datatype": "{{@ endpoint @}}"
+            "datatype": "{{@ datatype @}}s"
           },
           "operation_lookup_properties": {
-            "datatype": "{{@ endpoint @}}"
+            "datatype": "{{@ datatype @}}s"
           },
           "operation_update_properties": {
-            "datatype": "{{@ endpoint @}}"
+            "datatype": "{{@ datatype @}}s"
           },
           "primary_key": "id",
           "rest_system": "{{@ system @}}",
