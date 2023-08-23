@@ -17,6 +17,13 @@
         "endpoint": "contacts"
       },
       "template": "templates/contact.json"
+    },
+    "order": {
+      "label": "Order",
+      "parameters": {
+        "endpoint": "orders"
+      },
+      "template": "templates/order.json"
     }
   },
   "oauth2": {

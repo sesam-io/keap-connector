@@ -1,0 +1,101 @@
+[
+  {
+    "_id": "{{@ system @}}-{{@ datatype @}}-collect",
+    "namespaced_identifiers": false,
+    "source": {
+      "operation": "list",
+      "payload_property": "{{@ datatype @}}s",
+      "properties": {
+        "datatype": "{{@ datatype @}}s"
+      },
+      "system": "{{@ system @}}",
+      "type": "rest"
+    },
+    "type": "pipe"
+  },
+  {
+    "_id": "{{@ system @}}-{{@ datatype @}}-share",
+    "add_namespaces": false,
+    "batch_size": 1,
+    "compaction": {
+      "keep_versions": 100
+    },
+    "exclude_completeness": [
+      "{{@ system @}}-{{@ datatype @}}-share"
+    ],
+    "namespaced_identifiers": false,
+    "sink": {
+      "deletion_tracking": false,
+      "set_initial_offset": "onload"
+    },
+    "source": {
+      "dataset": "{{@ system @}}-{{@ datatype @}}-transform",
+      "type": "dataset"
+    },
+    "transform": [
+      {
+        "rules": {
+          "create-payload": [
+            [
+              "copy",
+              "*",
+              [
+                "list",
+                "_*",
+                "$*"
+              ]
+            ],
+            [
+              "remove",
+              [
+                "list",
+                "id",
+                "ScoreValue",
+                "last_updated_utc_millis",
+                "tag_ids"
+              ]
+            ]
+          ],
+          "default": [
+            [
+              "copy",
+              "*"
+            ],
+            [
+              "add",
+              "$payload",
+              [
+                "apply",
+                "create-payload",
+                "_S."
+              ]
+            ]
+          ]
+        },
+        "type": "dtl"
+      },
+      {
+        "properties": {
+          "operation_delete_properties": {
+            "datatype": "{{@ datatype @}}s"
+          },
+          "operation_insert_properties": {
+            "datatype": "{{@ datatype @}}s"
+          },
+          "operation_lookup_properties": {
+            "datatype": "{{@ datatype @}}s"
+          },
+          "operation_update_properties": {
+            "datatype": "{{@ datatype @}}s"
+          },
+          "primary_key": "id",
+          "rest_system": "{{@ system @}}",
+          "share_dataset": "{{@ system @}}-{{@ datatype @}}-share"
+        },
+        "template": "transform-share-rest",
+        "type": "template"
+      }
+    ],
+    "type": "pipe"
+  }
+]
