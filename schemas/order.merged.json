@@ -1,0 +1,258 @@
+{
+  "$id": "/api/pipes/xxxxxx-order-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "$last-modified": {
+      "type": "null"
+    },
+    "allow_payment": {
+      "description": "",
+      "type": null
+    },
+    "allow_paypal": {
+      "description": "",
+      "type": null
+    },
+    "contact": {
+      "additionalProperties": true,
+      "properties": {
+        "company_name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "first_name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "job_title": {
+          "type": "null"
+        },
+        "last_name": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "creation_date": {
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "invoice_number": {
+      "type": "integer"
+    },
+    "lead_affiliate_id": {
+      "type": "integer"
+    },
+    "modification_date": {
+      "type": "string"
+    },
+    "notes": {
+      "description": "",
+      "type": null
+    },
+    "order_date": {
+      "type": "string"
+    },
+    "order_items": {
+      "items": {
+        "additionalProperties": true,
+        "properties": {
+          "cost": {
+            "type": "integer"
+          },
+          "description": {
+            "type": "string"
+          },
+          "discount": {
+            "type": "null"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "jobRecurringId": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "null"
+          },
+          "price": {
+            "type": "integer"
+          },
+          "product": {
+            "additionalProperties": true,
+            "properties": {
+              "description": {
+                "type": "null"
+              },
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "shippable": {
+                "type": "boolean"
+              },
+              "sku": {
+                "type": "null"
+              },
+              "taxable": {
+                "type": "boolean"
+              }
+            },
+            "type": "object"
+          },
+          "quantity": {
+            "type": "integer"
+          },
+          "specialAmount": {
+            "type": "null"
+          },
+          "specialId": {
+            "type": "integer"
+          },
+          "specialPctOrAmt": {
+            "type": "integer"
+          },
+          "subscriptionPlan": {
+            "type": "null"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "payment_plan": {
+      "additionalProperties": true,
+      "properties": {
+        "auto_charge": {
+          "type": "boolean"
+        },
+        "credit_card_id": {
+          "type": "integer"
+        },
+        "days_between_payments": {
+          "type": "integer"
+        },
+        "initial_payment_amount": {
+          "type": "integer"
+        },
+        "initial_payment_date": {
+          "type": "string"
+        },
+        "number_of_payments": {
+          "type": "integer"
+        },
+        "payment_gateway": {
+          "additionalProperties": true,
+          "properties": {
+            "merchant_account_id": {
+              "type": "integer"
+            },
+            "use_default": {
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "plan_start_date": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "recurring": {
+      "description": "",
+      "type": null
+    },
+    "refund_total": {
+      "type": "integer"
+    },
+    "sales_affiliate_id": {
+      "type": "integer"
+    },
+    "shipping_information": {
+      "additionalProperties": true,
+      "properties": {
+        "city": {
+          "type": "null"
+        },
+        "company": {
+          "type": "null"
+        },
+        "country": {
+          "type": "null"
+        },
+        "first_name": {
+          "type": "null"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "invoiceToCompany": {
+          "type": "boolean"
+        },
+        "last_name": {
+          "type": "null"
+        },
+        "middle_name": {
+          "type": "null"
+        },
+        "phone": {
+          "type": "null"
+        },
+        "state": {
+          "type": "null"
+        },
+        "street1": {
+          "type": "null"
+        },
+        "street2": {
+          "type": "null"
+        },
+        "zip": {
+          "type": "null"
+        }
+      },
+      "type": "object"
+    },
+    "source_type": {
+      "description": "",
+      "type": null
+    },
+    "status": {
+      "type": "string"
+    },
+    "terms": {
+      "description": "",
+      "type": null
+    },
+    "title": {
+      "type": "string"
+    },
+    "total": {
+      "type": "integer"
+    },
+    "total_due": {
+      "type": "integer"
+    },
+    "total_paid": {
+      "type": "integer"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-order-collect",
+  "type": "object"
+}
