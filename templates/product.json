@@ -11,26 +11,6 @@
       "system": "{{@ system @}}",
       "type": "rest"
     },
-    "transform": {
-      "rules": {
-        "default": [
-          [
-            "copy",
-            "*"
-          ],
-          [
-            "add",
-            "$last-modified",
-            [
-              "datetime-parse",
-              "%Y-%m-%dT%H:%M:%S.%f%z",
-              "_S.last_updated"
-            ]
-          ]
-        ]
-      },
-      "type": "dtl"
-    },
     "type": "pipe"
   },
   {
@@ -70,9 +50,10 @@
               [
                 "list",
                 "id",
-                "ScoreValue",
-                "last_updated_utc_millis",
-                "tag_ids"
+                "{{@ datatype @}}_options",
+                "status",
+                "subscription_plans",
+                "url"
               ]
             ]
           ],
@@ -96,7 +77,6 @@
       },
       {
         "properties": {
-          "enable_deletes": true,
           "operation_delete_properties": {
             "datatype": "{{@ endpoint @}}"
           },
