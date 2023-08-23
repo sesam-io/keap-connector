@@ -18,19 +18,19 @@
       },
       "template": "templates/contact.json"
     },
-    "product": {
-      "label": "Product",
-      "parameters": {
-        "endpoint": "products"
-      },
-      "template": "templates/product.json"
-    },
     "order": {
       "label": "Order",
       "parameters": {
         "endpoint": "orders"
       },
       "template": "templates/order.json"
+    },
+    "product": {
+      "label": "Product",
+      "parameters": {
+        "endpoint": "products"
+      },
+      "template": "templates/product.json"
     }
   },
   "oauth2": {

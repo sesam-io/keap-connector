@@ -4,12 +4,32 @@
     "namespaced_identifiers": false,
     "source": {
       "operation": "list",
-      "payload_property": "{{@ datatype @}}s",
+      "payload_property": "{{@ endpoint @}}",
       "properties": {
-        "datatype": "{{@ datatype @}}s"
+        "datatype": "{{@ endpoint @}}"
       },
       "system": "{{@ system @}}",
       "type": "rest"
+    },
+    "transform": {
+      "rules": {
+        "default": [
+          [
+            "copy",
+            "*"
+          ],
+          [
+            "add",
+            "$last-modified",
+            [
+              "datetime-parse",
+              "%Y-%m-%dT%H:%M:%S.%f%z",
+              "_S.modification_date"
+            ]
+          ]
+        ]
+      },
+      "type": "dtl"
     },
     "type": "pipe"
   },
@@ -41,18 +61,31 @@
               "*",
               [
                 "list",
-                "_*",
-                "$*"
+                "*"
               ]
             ],
             [
-              "remove",
+              "add",
+              "contact_id",
+              "_S.contact.id"
+            ],
+            [
+              "add",
+              "{{@ datatype @}}_date",
+              "_S.{{@ datatype @}}_date"
+            ],
+            [
+              "add",
+              "{{@ datatype @}}_title",
+              "_S.title"
+            ],
+            [
+              "add",
+              "{{@ datatype @}}_items",
               [
-                "list",
-                "id",
-                "ScoreValue",
-                "last_updated_utc_millis",
-                "tag_ids"
+                "apply",
+                "{{@ datatype @}}_items_cleanup",
+                "_S.{{@ datatype @}}_items"
               ]
             ]
           ],
@@ -70,23 +103,37 @@
                 "_S."
               ]
             ]
+          ],
+          "{{@ datatype @}}_items_cleanup": [
+            [
+              "copy",
+              [
+                "list",
+                "description",
+                "price",
+                "quantity"
+              ]
+            ],
+            [
+              "add",
+              "product_id",
+              "_S.product.id"
+            ]
           ]
         },
         "type": "dtl"
       },
       {
         "properties": {
+          "enable_deletes": true,
           "operation_delete_properties": {
-            "datatype": "{{@ datatype @}}s"
+            "datatype": "{{@ endpoint @}}"
           },
           "operation_insert_properties": {
-            "datatype": "{{@ datatype @}}s"
+            "datatype": "{{@ endpoint @}}"
           },
           "operation_lookup_properties": {
-            "datatype": "{{@ datatype @}}s"
-          },
-          "operation_update_properties": {
-            "datatype": "{{@ datatype @}}s"
+            "datatype": "{{@ endpoint @}}"
           },
           "primary_key": "id",
           "rest_system": "{{@ system @}}",
