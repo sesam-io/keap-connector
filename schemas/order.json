@@ -3,16 +3,13 @@
   "$schema": "http://json-schema.org/schema#",
   "additionalProperties": true,
   "properties": {
-    "$last-modified": {
-      "type": "null"
-    },
     "allow_payment": {
       "description": "",
-      "type": null
+      "type": "boolean"
     },
     "allow_paypal": {
       "description": "",
-      "type": null
+      "type": "boolean"
     },
     "contact": {
       "additionalProperties": true,
@@ -27,10 +24,10 @@
           "type": "string"
         },
         "id": {
-          "type": "integer"
+          "type": "number"
         },
         "job_title": {
-          "type": "null"
+          "type": "string"
         },
         "last_name": {
           "type": "string"
@@ -42,20 +39,20 @@
       "type": "string"
     },
     "id": {
-      "type": "integer"
+      "type": "number"
     },
     "invoice_number": {
-      "type": "integer"
+      "type": "number"
     },
     "lead_affiliate_id": {
-      "type": "integer"
+      "type": "number"
     },
     "modification_date": {
       "type": "string"
     },
     "notes": {
       "description": "",
-      "type": null
+      "type": "string"
     },
     "order_date": {
       "type": "string"
@@ -65,37 +62,37 @@
         "additionalProperties": true,
         "properties": {
           "cost": {
-            "type": "integer"
+            "type": "number"
           },
           "description": {
             "type": "string"
           },
           "discount": {
-            "type": "null"
+            "type": "number"
           },
           "id": {
-            "type": "integer"
+            "type": "number"
           },
           "jobRecurringId": {
-            "type": "integer"
+            "type": "number"
           },
           "name": {
             "type": "string"
           },
           "notes": {
-            "type": "null"
+            "type": "string"
           },
           "price": {
-            "type": "integer"
+            "type": "number"
           },
           "product": {
             "additionalProperties": true,
             "properties": {
               "description": {
-                "type": "null"
+                "type": "string"
               },
               "id": {
-                "type": "integer"
+                "type": "number"
               },
               "name": {
                 "type": "string"
@@ -104,7 +101,7 @@
                 "type": "boolean"
               },
               "sku": {
-                "type": "null"
+                "type": "string"
               },
               "taxable": {
                 "type": "boolean"
@@ -113,19 +110,19 @@
             "type": "object"
           },
           "quantity": {
-            "type": "integer"
+            "type": "number"
           },
           "specialAmount": {
-            "type": "null"
+            "type": "number"
           },
           "specialId": {
-            "type": "integer"
+            "type": "number"
           },
           "specialPctOrAmt": {
-            "type": "integer"
+            "type": "number"
           },
           "subscriptionPlan": {
-            "type": "null"
+            "type": "string"
           },
           "type": {
             "type": "string"
@@ -142,25 +139,25 @@
           "type": "boolean"
         },
         "credit_card_id": {
-          "type": "integer"
+          "type": "number"
         },
         "days_between_payments": {
-          "type": "integer"
+          "type": "number"
         },
         "initial_payment_amount": {
-          "type": "integer"
+          "type": "number"
         },
         "initial_payment_date": {
           "type": "string"
         },
         "number_of_payments": {
-          "type": "integer"
+          "type": "number"
         },
         "payment_gateway": {
           "additionalProperties": true,
           "properties": {
             "merchant_account_id": {
-              "type": "integer"
+              "type": "number"
             },
             "use_default": {
               "type": "boolean"
@@ -176,81 +173,81 @@
     },
     "recurring": {
       "description": "",
-      "type": null
+      "type": "boolean"
     },
     "refund_total": {
-      "type": "integer"
+      "type": "number"
     },
     "sales_affiliate_id": {
-      "type": "integer"
+      "type": "number"
     },
     "shipping_information": {
       "additionalProperties": true,
       "properties": {
         "city": {
-          "type": "null"
+          "type": "string"
         },
         "company": {
-          "type": "null"
+          "type": "string"
         },
         "country": {
-          "type": "null"
+          "type": "string"
         },
         "first_name": {
-          "type": "null"
+          "type": "string"
         },
         "id": {
-          "type": "integer"
+          "type": "number"
         },
         "invoiceToCompany": {
           "type": "boolean"
         },
         "last_name": {
-          "type": "null"
+          "type": "string"
         },
         "middle_name": {
-          "type": "null"
+          "type": "string"
         },
         "phone": {
-          "type": "null"
+          "type": "string"
         },
         "state": {
-          "type": "null"
+          "type": "string"
         },
         "street1": {
-          "type": "null"
+          "type": "string"
         },
         "street2": {
-          "type": "null"
+          "type": "string"
         },
         "zip": {
-          "type": "null"
+          "type": "string"
         }
       },
       "type": "object"
     },
     "source_type": {
       "description": "",
-      "type": null
+      "type": "string"
     },
     "status": {
       "type": "string"
     },
     "terms": {
       "description": "",
-      "type": null
+      "type": "string"
     },
     "title": {
       "type": "string"
     },
     "total": {
-      "type": "integer"
+      "type": "number"
     },
     "total_due": {
-      "type": "integer"
+      "type": "number"
     },
     "total_paid": {
-      "type": "integer"
+      "type": "number"
     }
   },
   "title": "Pipe sink entity type: xxxxxx-order-collect",
