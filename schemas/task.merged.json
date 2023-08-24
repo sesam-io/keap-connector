@@ -1,0 +1,74 @@
+{
+  "$id": "/api/pipes/xxxxxx-task-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "completed": {
+      "type": "boolean"
+    },
+    "completion_date": {
+      "description": "",
+      "type": "string"
+    },
+    "contact": {
+      "additionalProperties": true,
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "first_name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "number"
+        },
+        "last_name": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "creation_date": {
+      "type": "string"
+    },
+    "description": {
+      "description": "",
+      "type": "string"
+    },
+    "due_date": {
+      "type": "string"
+    },
+    "funnel_id": {
+      "type": "number"
+    },
+    "id": {
+      "type": "number"
+    },
+    "jgraph_id": {
+      "type": "number"
+    },
+    "modification_date": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "number"
+    },
+    "remind_time": {
+      "type": "number"
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "number"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-task-collect",
+  "type": "object"
+}
