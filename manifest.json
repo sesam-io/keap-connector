@@ -24,6 +24,13 @@
         "endpoint": "products"
       },
       "template": "templates/product.json"
+    },
+    "task": {
+      "label": "Task",
+      "parameters": {
+        "endpoint": "tasks"
+      },
+      "template": "templates/task.json"
     }
   },
   "oauth2": {
