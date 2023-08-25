@@ -41,7 +41,7 @@
           },
           "id": {
             "format": "int64",
-            "type": "integer"
+            "type": "number"
           }
         },
         "title": "CustomFieldValue",
@@ -91,7 +91,7 @@
     },
     "id": {
       "format": "int64",
-      "type": "integer"
+      "type": "number"
     },
     "notes": {
       "type": "string"
