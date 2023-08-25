@@ -11,6 +11,26 @@
       "system": "{{@ system @}}",
       "type": "rest"
     },
+    "transform": {
+      "rules": {
+        "default": [
+          [
+            "copy",
+            "*"
+          ],
+          [
+            "add",
+            "$last-modified",
+            [
+              "datetime-parse",
+              "%Y-%m-%dT%H:%M:%S.%f%z",
+              "_S.modification_date"
+            ]
+          ]
+        ]
+      },
+      "type": "dtl"
+    },
     "type": "pipe"
   },
   {
@@ -66,6 +86,7 @@
       },
       {
         "properties": {
+          "enable_deletes": true,
           "operation_delete_properties": {
             "datatype": "{{@ endpoint @}}"
           },
