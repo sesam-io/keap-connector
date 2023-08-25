@@ -22,7 +22,7 @@
               "type": "string"
             },
             "id": {
-              "type": "integer"
+              "type": "number"
             }
           },
           "type": "object"
@@ -63,13 +63,13 @@
       "type": "string"
     },
     "id": {
-      "type": "integer"
+      "type": "number"
     },
     "last_updated": {
       "type": "string"
     },
     "last_updated_utc_millis": {
-      "type": "integer"
+      "type": "number"
     },
     "middle_name": {
       "anyOf": [
@@ -82,14 +82,14 @@
       ]
     },
     "owner_id": {
-      "type": "integer"
+      "type": "number"
     },
     "phone_numbers": {
       "items": {
         "additionalProperties": true,
         "properties": {
           "extension": {
-            "type": "null"
+            "type": "string"
           },
           "field": {
             "type": "string"

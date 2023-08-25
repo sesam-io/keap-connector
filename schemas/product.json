@@ -4,7 +4,7 @@
   "additionalProperties": true,
   "properties": {
     "id": {
-      "type": "integer"
+      "type": "number"
     },
     "product_desc": {
       "type": "string"
@@ -19,18 +19,18 @@
       "type": "array"
     },
     "product_price": {
-      "type": "integer"
+      "type": "number"
     },
     "product_short_desc": {
       "description": "",
-      "type": null
+      "type": "string"
     },
     "sku": {
       "description": "",
-      "type": null
+      "type": "string"
     },
     "status": {
-      "type": "integer"
+      "type": "number"
     },
     "subscription_only": {
       "type": "boolean"
@@ -59,15 +59,15 @@
                   ]
               },
               "frequency": {
-                  "type": "integer",
+                  "type": "number",
                   "format": "int32"
               },
               "id": {
-                  "type": "integer",
+                  "type": "number",
                   "format": "int64"
               },
               "number_of_cycles": {
-                  "type": "integer",
+                  "type": "number",
                   "format": "int32"
               },
               "plan_price": {
@@ -75,7 +75,7 @@
                   "format": "double"
               },
               "subscription_plan_index": {
-                  "type": "integer",
+                  "type": "number",
                   "format": "int32"
               },
               "subscription_plan_name": {
