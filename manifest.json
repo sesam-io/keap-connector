@@ -38,6 +38,13 @@
         "endpoint": "tasks"
       },
       "template": "templates/task.json"
+    },
+    "user": {
+      "label": "User",
+      "parameters": {
+        "endpoint": "users"
+      },
+      "template": "templates/user.json"
     }
   },
   "oauth2": {
